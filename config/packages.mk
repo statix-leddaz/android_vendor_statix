@@ -43,6 +43,10 @@ PRODUCT_PACKAGES += \
     Updater
 endif
 
+# Navbar
+PRODUCT_PACKAGES += \
+    NavigationBarNoHintOverlay
+
 # Some useful shell based utilities for Android
 PRODUCT_PACKAGES += \
     htop \

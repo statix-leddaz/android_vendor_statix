@@ -91,6 +91,9 @@ include vendor/statix/config/bootanimation.mk
 include vendor/statix/config/fonts.mk
 
 # Overlays
+PRODUCT_PACKAGES += \
+    CustomPixelLauncherOverlay
+
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/statix/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/statix/overlay/common
 

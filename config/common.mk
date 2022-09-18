@@ -105,3 +105,6 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/lib64/libRSSupport.so \
     system/lib64/libblasV8.so \
     system/lib64/librsjni.so
+
+# Optimize everything for preopt
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything

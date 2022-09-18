@@ -108,3 +108,15 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
 
 # Optimize everything for preopt
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
+
+# Optimise package manager dex flags
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    pm.dexopt.boot=verify \
+    pm.dexopt.first-boot=verify \
+    pm.dexopt.install=speed-profile \
+    pm.dexopt.bg-dexopt=everything
+
+ifneq ($(AB_OTA_PARTITIONS),)
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    pm.dexopt.ab-ota=verify
+endif

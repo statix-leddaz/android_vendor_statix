@@ -19,6 +19,7 @@ PRODUCT_PACKAGES += \
     FontDMSansOverlay \
     FontInterOverlay \
     FontLexendOverlay \
+    FontOppoSansOverlay \
     FontQuicksandOverlay \
     FontSwitzerOverlay
 

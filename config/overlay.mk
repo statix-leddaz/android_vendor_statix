@@ -17,6 +17,7 @@
 # Fonts
 PRODUCT_PACKAGES += \
     FontDMSansOverlay \
+    FontFluidSansOverlay \
     FontHarmonySansOverlay \
     FontInterOverlay \
     FontLexendOverlay \

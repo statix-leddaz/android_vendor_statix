@@ -119,4 +119,8 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 ifneq ($(AB_OTA_PARTITIONS),)
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     pm.dexopt.ab-ota=verify
+
+# Flags
+ifeq ($(TARGET_BUILD_VARIANT), user)
+    PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 endif

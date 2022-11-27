@@ -57,5 +57,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images
 
+# Repainter integration
+PRODUCT_PACKAGES += \
+    RepainterServicePriv
+
 # $(call inherit-product, vendor/bromite/bromite.mk)
 -include vendor/statix/config/overlay.mk

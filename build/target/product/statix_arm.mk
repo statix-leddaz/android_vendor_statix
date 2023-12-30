@@ -16,10 +16,9 @@ $(call inherit-product, device/generic/common/gsi_arm.mk)
 
 include vendor/statix/build/target/product/statix_generic_target.mk
 
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
-
 TARGET_NO_KERNEL_OVERRIDE := true
-
 TARGET_DOES_NOT_USE_GAPPS := true
 
 $(call inherit-product, vendor/gapps/arm/arm-vendor.mk)

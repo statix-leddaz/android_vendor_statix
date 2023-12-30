@@ -12,10 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, build/target/product/aosp_arm.mk)
+$(call inherit-product, device/generic/common/gsi_arm.mk)
 
 include vendor/statix/build/target/product/statix_generic_target.mk
 
-TARGET_USES_64_BIT_BINDER := true
+PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
+
+TARGET_NO_KERNEL_OVERRIDE := true
+
+TARGET_DOES_NOT_USE_GAPPS := true
+
+$(call inherit-product, vendor/gapps/arm/arm-vendor.mk)
 
 PRODUCT_NAME := statix_arm

@@ -1,4 +1,4 @@
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2019-2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,18 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, build/target/product/gsi_release.mk)
 $(call inherit-product, vendor/statix/config/common.mk)
 $(call inherit-product, vendor/statix/config/gsm.mk)
 
-PRODUCT_COPY_FILES += \
-    device/generic/goldfish/data/etc/permissions/privapp-permissions-goldfish.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-goldfish.xml \
-
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.product.property_source_order=odm,vendor,product,system_ext,system
-
 # Allow building otatools
 TARGET_FORCE_OTA_PACKAGE := true
-
-# No kernel
-TARGET_NO_KERNEL_OVERRIDE := true
